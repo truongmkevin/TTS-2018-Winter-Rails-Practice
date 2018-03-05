@@ -12,7 +12,7 @@
 
 <p>
   <strong>Blog entry:</strong>
-  <%= @post.blog_entry %>
+  <%= @post.blog_entry.html_safe %>
 </p>
 
 <%= render 'comments/form', comment: @comment %>
