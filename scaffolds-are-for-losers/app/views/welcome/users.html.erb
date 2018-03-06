@@ -1,2 +1,18 @@
-<h1>Welcome#users</h1>
-<p>Find me in app/views/welcome/users.html.erb</p>
+<h1>All The Users</h1>
+
+<table border='2'>
+  <thead>
+    <th>User Name</th>
+    <th>User Age</th>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.age %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to "Input a New User", root_path %></p>
