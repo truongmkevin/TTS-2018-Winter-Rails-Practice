@@ -1,11 +1,20 @@
-<h1>Products Page</h1>
+<h1>All The Product</h1>
 
-<div>
-  <h3>Create a Product</h3>
-  <%= form_for @product do |f| %>
-    <%= f.text_field :name, placeholder: "Product Name" %><br />
-    <%= f.number_field :price, placeholder: "Price", step: :any %><br />
-    <%= f.number_field :quantity, placeholder: "Quantity" %><br />
-    <%= f.submit %>
-  <% end %>
-</div>
+<table border='2'>
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+      <td><%= product.quantity %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to "Input a New Product", root_path %></p>
