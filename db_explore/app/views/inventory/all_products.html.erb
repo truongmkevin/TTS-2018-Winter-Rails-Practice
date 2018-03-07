@@ -1,0 +1,11 @@
+
+<%= @products %>
+
+<hr>
+
+<% @products.each do |product| %>
+
+  <p><%= product.name %></p>
+  <p><%= "#{product.category}, #{product.price}" %></p>
+
+<% end %>
